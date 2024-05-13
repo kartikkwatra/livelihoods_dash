@@ -580,8 +580,7 @@ def protected_page():
                 st.metric(label=selected_column + ' Growth (over latest year)', value=round(growth_rate, 1), delta=round(growth_rate_df[selected_column].iloc[-1] - growth_rate_df[selected_column].iloc[-2]))
 
 if st.session_state["authentication_status"]:
-    authenticator.logout()
-    st.write(f'Welcome *{st.session_state["name"]}*')
+    # authenticator.logout()
     protected_page()
 elif st.session_state["authentication_status"] is False:
     st.error('Username/password is incorrect')
