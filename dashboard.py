@@ -19,8 +19,7 @@ authenticator = stauth.Authenticate(
 
 authenticator.login()
 
-def protected_page()
-
+def protected_page():
     # functions to transform data
     def transform_data(data, id_vars, var_name):
         df = pd.DataFrame(data)
