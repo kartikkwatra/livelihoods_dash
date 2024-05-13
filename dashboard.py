@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import streamlit_authenticator as stauth
-
 import yaml
 from yaml.loader import SafeLoader
+
+st.set_page_config(layout="wide")
 
 with open('./config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
